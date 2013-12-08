@@ -3,49 +3,29 @@
 
 export PHP_AUTOCONF=/usr/bin/autoconf2.13
                    
-CONFIGURE_OPTIONS="--enable-fpm
-                   --enable-zend-multibyte
-                   --enable-phar
-                   --disable-intl
-                   --with-libxml-dir=/usr/local
-                   --with-openssl
-                   --with-kerberos=/usr
-                   --with-zlib
-                   --with-zlib-dir=/usr/local
-                   --enable-bcmath
-                   --with-bz2=/usr
-                   --enable-calendar
-                   --enable-exif
-                   --with-png-dir=/usr/local
-                   --with-jpeg-dir=/usr/local
-                   --with-freetype-dir=/usr/local
-                   --with-gd
-                   --enable-gd-native-ttf
-                   --with-pear
-                   --enable-mbstring
-                   --enable-mbregex
-                   --enable-shmop
+CONFIGURE_OPTIONS="--with-fpm-user=www-data
+                   --with-fpm-group=www-data
+                   --enable-fpm
                    --enable-soap
-                   --enable-sockets
-                   --enable-sysvmsg
-                   --enable-sysvsem
-                   --enable-sysvshm
-                   --enable-wddx
-                   --with-xmlrpc
-                   --with-xsl=/usr/local
+                   --with-mcrypt
+                   --enable-mbstring
+                   --with-openssl
+                   --with-kerberos
+                   --with-gd
+                   --with-jpeg-dir=/usr/lib
+                   --enable-gd-native-ttf
+                   --with-libxml-dir=/usr/lib
+                   --with-curl
                    --enable-zip
-                   --with-pcre-regex
-                   --with-curl=/usr/local
-                   --with-iconv-dir=/usr/local
-                   --with-mcrypt=/usr/local
-                   --with-gettext=/usr/local
-                   --enable-pcntl
+                   --enable-sockets
+                   --with-zlib
+                   --enable-exif
+                   --enable-ftp
+                   --with-iconv
+                   --with-gettext
+                   --enable-gd-native-ttf
+                   --with-freetype-dir=/usr
                    --with-mysql
-                   --with-mysqli
-                   --with-pdo-mysql
-                   --with-mysql-sock=/var/run/mysqld/mysqld.sock
-                   --with-readline
-                   --with-ncurses
                    "
                    
 # FIX: it is not going to install on Ubuntu 13.04
