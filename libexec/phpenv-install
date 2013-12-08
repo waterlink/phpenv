@@ -239,6 +239,9 @@ function build_error() {
 # cleans up our build environment
 function cleanup() {
   ${GIT} checkout -f master && ${GIT} branch -D build &> /dev/null
+  rm .gitignore &> /dev/null
+  ${GIT} clean -f
+  ${GIT} checkout .
 }
 
 # Reset the default streams and close file descriptors
