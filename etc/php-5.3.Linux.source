@@ -1,7 +1,7 @@
 # Configure options for PHP 5.3 releases Linux specific.
 #
 
-export PHP_AUTOCONF=/usr/bin/autoconf2.13
+#export PHP_AUTOCONF=/usr/bin/autoconf2.13
                    
 CONFIGURE_OPTIONS="--with-fpm-user=www-data
                    --with-fpm-group=www-data
