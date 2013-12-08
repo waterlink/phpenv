@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+## Kicks off a multi-step process, which can resumed at any point,
 # Summary: Configure, build and install a PHP release version
 #
 # Usage: phpenv install <release> [<build>]
@@ -290,7 +290,8 @@ function configure_option() {
 # configures a `pear` install in `$PREFIX/pear`
 function enable_pear() {
   [[ ! -d "$PREFIX/pear" ]] && mkdir -p "$PREFIX/pear"
-  configure_option "--with-pear" "$PREFIX/pear"
+  #configure_option "--with-pear" "$PREFIX/pear"
+  true
 }
 
 # installs Pyrus
@@ -522,12 +523,12 @@ function configure_release() {
   echo
 
   # perform build / configure
-  phpenv-hooks install pre-buildconf
-  rm -rf configure autom4te.cache
-  ./buildconf --force
-  phpenv-hooks install pre-configure
+  #phpenv-hooks install pre-buildconf
+  #rm -rf configure autom4te.cache
+  #./buildconf --force
+  #phpenv-hooks install pre-configure
   ./configure $argv
-  phpenv-hooks install post-configure
+  #phpenv-hooks install post-configure
 
   is_osx && sed -i '' -e 's#INSTALL_IT =.*$#INSTALL_IT=mkdir -p \${prefix}/libexec \&\& cp libs/libphp5.so  \${prefix}/libexec/.#' Makefile || \
             sed -i -e 's#INSTALL_IT =.*$#INSTALL_IT=mkdir -p \${prefix}/libexec \&\& cp libs/libphp5.so  \${prefix}/libexec/.#' Makefile
