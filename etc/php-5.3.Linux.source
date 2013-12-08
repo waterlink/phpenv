@@ -3,8 +3,7 @@
 
 export PHP_AUTOCONF=/usr/bin/autoconf2.13
                    
-CONFIGURE_OPTIONS="--with-apxs2=/usr/bin/apxs2
-                   --enable-fpm
+CONFIGURE_OPTIONS="--enable-fpm
                    --enable-zend-multibyte
                    --enable-phar
                    --disable-intl
