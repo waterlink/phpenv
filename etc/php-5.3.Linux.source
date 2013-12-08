@@ -45,7 +45,6 @@ CONFIGURE_OPTIONS="--enable-fpm
                    --with-pdo-mysql
                    --with-mysql-sock=/var/run/mysqld/mysqld.sock
                    --with-readline
-                   --enable-apc
                    --with-ncurses
                    --enable-igbinary
                    "
@@ -53,5 +52,6 @@ CONFIGURE_OPTIONS="--enable-fpm
 # FIX: it is not going to install on Ubuntu 13.04
 # --enable-memcached
 # --enable-memcached-igbinary
+# --enable-apc
 
 MANUAL_EXTENSIONS=('http' 'uri-template' 'xdebug')
